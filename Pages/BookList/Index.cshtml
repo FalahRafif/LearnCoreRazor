@@ -1,0 +1,72 @@
+﻿@page
+@model BookListRazor.Pages.BookList.IndexModel
+
+
+<br />
+@* Content *@
+<div class="container row p-0 m-0">
+    @* Main Card *@
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                @* Header *@
+                <div class="row">
+                    <div class="col-sm-9">
+                        <h2>Book list</h2>
+                    </div>
+                    <div class="col-sm-3">
+                        <!--Link with tag helper-->
+                        <a class="btn btn-info form-control" asp-page="Create">Create New Book</a>
+                    </div>
+                </div>
+                <hr />
+                @* Table *@
+                <div class="row>
+                    <div class="col-sm-12">
+                        <form action="#" method="post">
+                            @if (Model.Books.Count() > 0)
+                            {
+                                <table class="table table-striped border">
+                                    <tr class="table-secondary">
+                                        <th>
+                                            <label asp-for="Books.FirstOrDefault().Name"></label><!-- tag helper in action-->
+                                        </th>
+                                        <th>
+                                            @*@Html.DisplayNameFor(m => m.Books.FirstOrDefault().Author)*@ <!-- Html Helper in action-->
+                                            <label asp-for="Books.FirstOrDefault().Author"></label>
+                                        </th>
+                                        <th>
+                                            Action
+                                        </th>
+                                    </tr>
+                                    @foreach (var item in Model.Books)
+                                    {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(m => item.Name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(m => item.Author)
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-danger btn-sm mr-1 ml-1">Delete</button>
+                                            <a href="#" class="btn btn-warning btn-sm mr-1 ml-1">Edit</a>
+                                        </td>
+                                    </tr>
+                                    }
+                                </table>
+                            }
+                            else
+                            {
+                                <p>No Book Available</p>
+                            }
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
