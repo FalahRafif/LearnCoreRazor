@@ -725,3 +725,4 @@ D:\Work\C#\NET_CORE\BookListRazor\obj\Debug\netcoreapp3.1\BookListRazor.csproj.C
 D:\Work\C#\NET_CORE\BookListRazor\obj\Debug\netcoreapp3.1\BookListRazor.dll
 D:\Work\C#\NET_CORE\BookListRazor\obj\Debug\netcoreapp3.1\BookListRazor.pdb
 D:\Work\C#\NET_CORE\BookListRazor\obj\Debug\netcoreapp3.1\BookListRazor.genruntimeconfig.cache
+D:\Work\C#\NET_CORE\BookListRazor\obj\Debug\netcoreapp3.1\BookListRazor.csproj.AssemblyReference.cache
