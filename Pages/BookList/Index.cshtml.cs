@@ -14,7 +14,7 @@ namespace BookListRazor.Pages.BookList
         //add object dependency injection
         private readonly ApplicationDbContext _db;
 
-        public IndexModel(ApplicationDbContext db)
+        public IndexModel(ApplicationDbContext db) 
         {
             _db = db;
         }

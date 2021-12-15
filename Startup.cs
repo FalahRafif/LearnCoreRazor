@@ -27,6 +27,7 @@ namespace BookListRazor
         {
             //include EF DbContext to Pipeline
             services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddControllersWithViews();//add api call
             services.AddRazorPages().AddRazorRuntimeCompilation(); // using package
         }
 
@@ -53,6 +54,7 @@ namespace BookListRazor
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers(); //call controller to pipeline
                 endpoints.MapRazorPages();
             });
         }
