@@ -8,7 +8,7 @@ namespace BookListRazor.Model
 {
     public class ApplicationDbContext : DbContext //inherit with EF DbContext
     {
-        //add-migration generate script sql
+        //add-migration -v generate script sql
         //update-database generate/update database
         //pass base > options
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
