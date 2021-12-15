@@ -1,4 +1,4 @@
-﻿@page
+﻿@page 
 @model BookListRazor.Pages.BookList.IndexModel
 
 
@@ -23,7 +23,7 @@
                 @* Table *@
                 <div class="row>
                     <div class="col-sm-12">
-                        <form action="#" method="post">
+                        <form method="post">
                             @if (Model.Books.Count() > 0)
                             {
                                 <table class="table table-striped border">
@@ -55,7 +55,7 @@
                                             @Html.DisplayFor(m => item.ISBN)
                                         </td>
                                         <td>
-                                            <button class="btn btn-danger btn-sm mr-1 ml-1">Delete</button>
+                                            <button asp-page-handler="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure want to Delete @item.Name ?')" class="btn btn-danger btn-sm mr-1 ml-1">Delete</button>
                                             <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm mr-1 ml-1">Edit</a> <!--Edit Page and Pass a ID-->
                                         </td>
                                     </tr>
