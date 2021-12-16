@@ -3,14 +3,17 @@
 @{
 }
 <br />
-<h2 class="text-info">Edit Book</h2>
+<h2 class="text-info">@(Model.Book.Id!=0? "Edit" : "Create") Book</h2>
 <br />
 @* Form *@
 <div class="border container" style="padding:30px">
     <form method="post">
         @* Input *@
-
-        <input type="hidden" asp-for="Book.Id" />
+        @if(Model.Book.Id != 0)
+            {
+                <input type="hidden" asp-for="Book.Id" />
+            }
+        
 
         <div class="form-group row">
             <div class="text-danger" asp-validation-summary="ModelOnly"></div> <!--Tag Helper to show/retreived error message-->
@@ -43,7 +46,7 @@
         @* Button *@
         <div class="form-group row">
             <div class="col-sm-3 offset-4">
-                <input type="submit" value="Update" class="btn btn-primary form-control" />
+                <button type="submit" class="btn btn-primary form-control">@(Model.Book.Id!=0? "Edit" : "Create")</button>
             </div>
             <div class="col-sm-3">
                 <a asp-page="Index" class="btn btn-secondary form-control">Back to List</a>

@@ -11,12 +11,16 @@
             <div class="card-body">
                 @* Header *@
                 <div class="row">
-                    <div class="col-sm-9">
+                    <div class="col-sm-6">
                         <h2>Book list</h2>
                     </div>
                     <div class="col-sm-3">
                         <!--Link with tag helper-->
                         <a class="btn btn-info form-control" asp-page="Create">Create New Book</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <!--Link with tag helper-->
+                        <a class="btn btn-info form-control" asp-page="Upsert">Create New Book at Upsert</a>
                     </div>
                 </div>
                 <hr />
